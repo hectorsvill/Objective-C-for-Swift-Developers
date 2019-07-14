@@ -15,11 +15,11 @@ void learn1() {
 	
 	int n = 42;
 	
-//	NSString *str1 = @"objective-C String!";
+	NSString *str1 = @"objective-C String!";
 	
 	char *str2 = "C String!";
 		
-//	NSArray *arr = @[@"arr1", @"arr2"];
+	NSArray *arr = @[@"arr1", @"arr2"];
 	
 	if (n ==  42)
 		NSLog(@"found it");
