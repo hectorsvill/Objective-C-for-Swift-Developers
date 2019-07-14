@@ -12,40 +12,38 @@
 
 
 void learn1() {
-	@autoreleasepool {
-		int n = 42;
+	
+	int n = 42;
+	
+//	NSString *str1 = @"objective-C String!";
+	
+	char *str2 = "C String!";
 		
-		NSString *str1 = @"objective-C String!";
-		
-		char *str2 = "C String!";
-		
-		NSArray *arr = @[@"arr1", @"arr2"];
-		
-		if (n ==  42)
-			NSLog(@"found it");
-		else
-			NSLog(@"\nThis is %s, %i \n", str2, n);
+//	NSArray *arr = @[@"arr1", @"arr2"];
+	
+	if (n ==  42)
+		NSLog(@"found it");
+	else
+		NSLog(@"\nThis is %s, %i \n", str2, n);
 		
 		
-		switch (n) {
-			case 1:
-			{
-				int foo = 1;
-				NSLog(@"found %i", foo);
-				break;
-			}
+	switch (n) {
+		case 1:
+		{
+			int foo = 1;
+			NSLog(@"found %i", foo);
+			break;
 		}
-			//wrong
-			//	switch (n) {
-			//		case 2:
-			//			NSLog(@"found it")
-			//			int i = 0;
-			//			break;
-			//
-			//	}
-		
-		
 	}
+	//wrong
+	//	switch (n) {
+	//		case 2:
+	//			NSLog(@"found it")
+	//			int i = 0;
+	//			break;
+	//
+	//	}
+
 }
 
 
@@ -65,10 +63,11 @@ void learn3NillCoalescing() {
 
 
 int main(int argc, const char * argv[]) {
-//	learn1();
-//	learn2Loops();
-	learn3NillCoalescing();
-	
+	@autoreleasepool {
+		//learn1();
+		//learn2Loops();
+		learn3NillCoalescing();
+	}
 	
 	return 0;
 }
