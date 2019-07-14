@@ -9,26 +9,29 @@
 #import <Foundation/Foundation.h>
 
 
+#define MYNUMBER 40
 
-
-void learn1() {
+void learn1CreatingVariables() {
 	
 	int n = 42;
 	
-	//NSString *str1 = @"objective-C String!";
+	NSString *str1 = @"objective-C String!";
 	
 	char *str2 = "C String!";
 		
 	NSArray *arr = @[@"arr1", @"arr2"];
-	NSLog(@"1:%@ 2:%@\n", arr[0], arr[1]);
 	
 	
 	if (n ==  42)
-		NSLog(@"found it");
+		NSLog(@"1:%@ 2:%@\n", arr[0], arr[1]);
 	else
-		NSLog(@"\nThis is %s, %i \n", str2, n);
-		
-		
+		NSLog(@"\nThis is %s, %@ \n", str2, str1);
+	
+	
+}
+
+void learn2SwitchCase() {
+	int n = 42;
 	switch (n) {
 		case 1:
 		{
@@ -36,20 +39,13 @@ void learn1() {
 			NSLog(@"found %i", foo);
 			break;
 		}
+		case 42:
+			NSLog(@"Found %d \n", n);
 	}
-	//wrong
-	//	switch (n) {
-	//		case 2:
-	//			NSLog(@"found it")
-	//			int i = 0;
-	//			break;
-	//
-	//	}
-
 }
 
 
-void learn2Loops() {
+void learn3Loops() {
 	NSArray *names = @[@"hector", @"Marcela"];
 	for (NSString *name in names)
 		NSLog(@"hello %@\n", name);
@@ -58,7 +54,7 @@ void learn2Loops() {
 		NSLog(@"%d * %d = %d", d, d, d * d);
 }
 
-void learn3NillCoalescing() {
+void learn4NillCoalescing() {
 	NSString *str = nil;
 	NSLog(@"is nil %@", str ?: @"is nil");
 }
@@ -66,9 +62,10 @@ void learn3NillCoalescing() {
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learn1();
-		//learn2Loops();
-//		learn3NillCoalescing();
+		//learn1CreatingVariables();
+		learn2SwitchCase();
+		
+		
 	}
 	
 	return 0;
