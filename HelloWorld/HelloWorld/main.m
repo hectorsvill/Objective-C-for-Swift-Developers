@@ -15,11 +15,13 @@ void learn1() {
 	
 	int n = 42;
 	
-	NSString *str1 = @"objective-C String!";
+	//NSString *str1 = @"objective-C String!";
 	
 	char *str2 = "C String!";
 		
 	NSArray *arr = @[@"arr1", @"arr2"];
+	NSLog(@"1:%@ 2:%@\n", arr[0], arr[1]);
+	
 	
 	if (n ==  42)
 		NSLog(@"found it");
@@ -64,9 +66,9 @@ void learn3NillCoalescing() {
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		//learn1();
+		learn1();
 		//learn2Loops();
-		learn3NillCoalescing();
+//		learn3NillCoalescing();
 	}
 	
 	return 0;
