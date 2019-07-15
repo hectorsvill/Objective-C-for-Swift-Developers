@@ -11,7 +11,7 @@
 
 #define MYNUMBER 40
 
-void learn1CreatingVariables() {
+void learnCreatingVariables() {
 	
 	int n = 42;
 	
@@ -30,7 +30,7 @@ void learn1CreatingVariables() {
 	
 }
 
-void learn2SwitchCase() {
+void learnSwitchCase() {
 	int n = 42;
 	switch (n) {
 		case 1:
@@ -44,8 +44,7 @@ void learn2SwitchCase() {
 	}
 }
 
-
-void learn3Loops() {
+void learnLoops() {
 	NSArray *names = @[@"hector", @"Marcela"];
 	for (NSString *name in names)
 		NSLog(@"hello %@\n", name);
@@ -54,19 +53,25 @@ void learn3Loops() {
 		NSLog(@"%d * %d = %d", d, d, d * d);
 }
 
-void learn4NillCoalescing() {
+void learnNillCoalescing() {
 	NSString *str = nil;
 	NSLog(@"is nil %@", str ?: @"is nil");
 }
 
+void learnPointers() {
+	//all objective-c objects must be ponters
+	//constants
+	NSString * const first = @"Hello";
+	NSLog(@"%p, %@", first, first);
+	
+	NSInteger n = 100;
+	NSLog(@"%ld %@ \n",n, first);
+}
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		//learn1CreatingVariables();
-		learn2SwitchCase();
-		
-		
+		learnPointers();
 	}
-	
+
 	return 0;
 }

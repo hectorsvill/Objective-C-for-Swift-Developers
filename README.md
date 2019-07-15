@@ -64,14 +64,80 @@ void learn2SwitchCase() {
 ```
 
 #
-###  
+###  loops
 
 *Swift*
 ```swift
+func learnLoops() {
+	let names  = ["str1", "atr2"]
+	for n in names {
+		print(n)
+	}
+}
+
 ```
 
 *Objective-C*
 ```objective-c
+void learnLoops() {
+	NSArray *names = @[@"hector", @"Marcela"];
+	for (NSString *name in names)
+		NSLog(@"hello %@\n", name);
+
+	for(int d = 0; d < 10; d++)
+		NSLog(@"%d * %d = %d", d, d, d * d);
+}
+```
+
+
+
+#
+### nill coalescing
+
+*Swift*
+```swift
+
+func learnNillCoalescing() {
+	let str: String?
+	str = nil
+	print("This string is \(str ?? "an empty string")")
+}
+
+```
+
+*Objective-C*
+```objective-c
+void learnNillCoalescing() {
+	NSString *str = nil;
+	NSLog(@"is nil %@", str ?: @"is nil");
+}
+
+```
+
+#
+###  Pointers
+
+*Objective-C*
+```objective-c
+
+void learnPointers() {
+//all objective-c objects must be ponters
+//constants
+	NSString * const first = @"Hello";
+	NSLog(@"%p, %@", first, first);
+
+	NSInteger n = 100;
+	NSLog(@"%ld %@ \n",n, first);
+}
+
+```
+
+#
+###  Pointers
+
+*Objective-C*
+```objective-c
+
 
 ```
 
