@@ -133,12 +133,75 @@ void learnPointers() {
 ```
 
 #
-###  Pointers
+###  Format Specifiers 
 
 *Objective-C*
 ```objective-c
+void learnFormatSpecifiers() {
+// %@ means "contents of object"
+// %d means "int"
+// %p means "print pointer of object"
+// %f means "floating point"
+// %ld means "long int"
 
 
+	NSLog(@"Euler's number: %0.5f", EULERS_NUMBER);
+
+	NSInteger i = 10;
+	NSLog(@"%ld", (long)i);
+}
+
+```
+
+#
+
+###   Strings
+
+*Objective-C*
+```objective-c
+void LearnStrings() {
+	NSString *str = @"objective-c String";
+	NSLog(@"%@", str);
+
+	NSInteger number = 42;
+
+	NSString *output = [NSString stringWithFormat:@"You Pick %ld", (long)number];
+	NSLog(@"%@", output);
+
+	NSString *output2 = [[NSString alloc] initWithFormat:@"I Picked %ld", (long)number];
+	NSLog(@"%@\n", output2);
+}
+
+
+```
+
+#
+
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
 ```
 
 #

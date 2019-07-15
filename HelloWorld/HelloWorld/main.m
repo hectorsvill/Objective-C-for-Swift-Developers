@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-#define MYNUMBER 40
+#define EULERS_NUMBER 2.7182818284590452353602874713527
 
 void learnCreatingVariables() {
 	
@@ -68,9 +68,46 @@ void learnPointers() {
 	NSLog(@"%ld %@ \n",n, first);
 }
 
+void learnFormatSpecifiers() {
+	// %@ means "contents of object"
+	// %d means "int"
+	// %p means "print pointer of object"
+	// %f means "floating point"
+	// %ld means "long int"
+	
+	
+	NSLog(@"Euler's number: %0.5f", EULERS_NUMBER);
+	
+	NSInteger i = 10;
+	NSLog(@"%ld", (long)i);
+}
+
+
+void LearnStrings() {
+	NSString *str = @"objective-c String";
+	NSLog(@"%@", str);
+	
+	NSInteger number = 42;
+	
+	NSString *output = [NSString stringWithFormat:@"You Pick %ld", (long)number];
+	NSLog(@"%@", output);
+	
+	NSString *output2 = [[NSString alloc] initWithFormat:@"I Picked %ld", (long)number];
+	NSLog(@"%@\n", output2);
+	
+//	NSString *output3 = [[NSString alloc] initWithContentsOfFile:@"hello.txt" usedEncoding: error: nil];
+//	NSLog(@"%@\n", output3);
+	
+	
+	
+}
+
+
+
+
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learnPointers();
+		LearnStrings();
 	}
 
 	return 0;
