@@ -171,16 +171,34 @@ void LearnStrings() {
 	NSString *output2 = [[NSString alloc] initWithFormat:@"I Picked %ld", (long)number];
 	NSLog(@"%@\n", output2);
 }
-
-
 ```
 
-#
 
-###   
+## Manipulating and evaluating strings
 
-*Objective-C*
 ```objective-c
+NSString *stringByReaplicingOccurrencesofString = [str stringByReplacingOccurrencesOfString:@"String" withString: @"stringByReaplicingOccurrencesofString"];
+NSLog(@"%@ \n", stringByReaplicingOccurrencesofString); // objective-c stringByReaplicingOccurrencesofString
+
+NSString *stringByAppendingString = [output stringByAppendingString:@" - append this string!"];
+NSLog(@"%@\n", stringByAppendingString); // You Pick 42 - append this string!
+
+
+NSString *substringFromIndex = [output substringFromIndex: 4];
+NSLog(@"%@\n", substringFromIndex); // Pick 42
+
+NSArray *componentsSeparatedByString = [output componentsSeparatedByString: @" "];
+NSLog(@"%ld\n", componentsSeparatedByString.count); // 3
+
+//	BOOL checkIsEqualtoString = [@"str" isEqualToString:@"str"];
+
+if ( [@"str" isEqualToString:@"str"]){
+	NSInteger intToString = [@"42" integerValue];
+	NSLog(@"%ld\n", (long)intToString * 4);
+}
+
+if ([output containsString: @"42"]) {
+}
 ```
 
 #
