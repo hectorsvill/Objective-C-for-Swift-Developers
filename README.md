@@ -233,10 +233,25 @@ NSLog(@"%@\n%@\n", luckyNumber, blueSky);
 ```
 
 #
-###   
+###   Arrays
 
 *Objective-C*
 ```objective-c
+NSArray *scores = @[@101, @102, @99, @105, @104];
+
+for (NSNumber *score in scores) {
+	//NSLog(@"%@ \n", score);
+	long number = [score longValue];
+	NSLog(@"%ld", number);
+}
+
+NSArray *colors = [NSArray arrayWithObjects:@"red", @"green", @"blue", nil];
+for (NSString *color in [colors reverseObjectEnumerator]) {
+	print_l(color); // print funtion i created 
+}
+
+NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
+
 ```
 
 #

@@ -11,6 +11,10 @@
 
 #define EULERS_NUMBER 2.7182818284590452353602874713527
 
+void print_l(NSString *str) {
+	NSLog(@"%@\n", str);
+}
+
 void learnCreatingVariables() {
 	
 	int n = 42;
@@ -147,12 +151,29 @@ void learnNSNumber() {
 	
 	NSNumber *luckyNumber = @EULERS_NUMBER;
 	NSNumber *blueSky = @NO;
-	NSLog(@"%@\n%@\n", luckyNumber, blueSky);
+	NSLog(@"%@\n%@\n%f", luckyNumber, blueSky, number);
+}
+
+void learnArrays() {
+	NSArray *scores = @[@101, @102, @99, @105, @104];
+	
+	for (NSNumber *score in scores) {
+//		NSLog(@"%@ \n", score);
+		long number = [score longValue];
+		NSLog(@"%ld", number);
+	}
+	
+	NSArray *colors = [NSArray arrayWithObjects:@"red", @"green", @"blue", nil];
+	for (NSString *color in [colors reverseObjectEnumerator]) {
+		print_l(color);
+	}
+	
+	NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
 }
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learnNSNumber();
+		learnArrays();
 	}
 
 	return 0;
