@@ -247,7 +247,7 @@ for (NSNumber *score in scores) {
 
 NSArray *colors = [NSArray arrayWithObjects:@"red", @"green", @"blue", nil];
 for (NSString *color in [colors reverseObjectEnumerator]) {
-	print_l(color); // print funtion i created 
+	print_l(color); // print funtion i wrote 
 }
 
 NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
@@ -255,8 +255,49 @@ NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
 ```
 
 #
+### Mutable Arrays
+
 *Objective-C*
 ```objective-c
+NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+
+[colors removeObjectAtIndex:0];
+[colors insertObject:@"black" atIndex: 1];
+
+for (NSString *color in [colors reverseObjectEnumerator]) {
+	print_l(color);
+}
+
+[colors removeAllObjects];
+
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+### 
+
+*Objective-C*
+```objective-c
+
+
 ```
 
 #

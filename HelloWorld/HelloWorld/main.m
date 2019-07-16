@@ -171,9 +171,23 @@ void learnArrays() {
 	NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
 }
 
+void learnMutableArrays() {
+	NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+	
+	[colors removeObjectAtIndex:0];
+	[colors insertObject:@"black" atIndex: 1];
+	
+	for (NSString *color in [colors reverseObjectEnumerator]) {
+		print_l(color);
+	}
+	
+	[colors removeAllObjects];
+}
+
+
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learnArrays();
+		learnMutableArrays();
 	}
 
 	return 0;
