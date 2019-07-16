@@ -185,9 +185,20 @@ void learnMutableArrays() {
 }
 
 
+void learnSorting() {
+	NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+	NSArray *sorted = [colors sortedArrayUsingSelector:@selector(compare:)];
+	for (NSString *s in sorted) {
+		print_l(s);
+	}
+	
+}
+
+
+
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learnMutableArrays();
+		learnSorting();
 	}
 
 	return 0;

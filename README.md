@@ -272,11 +272,19 @@ for (NSString *color in [colors reverseObjectEnumerator]) {
 
 ```
 
-#
+# Sorting
 ###   
 
 *Objective-C*
 ```objective-c
+
+NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+
+NSArray *sorted = [colors sortedArrayUsingSelector:@selector(compare:)];
+
+for (NSString *s in sorted) {
+	print_l(s);
+}
 ```
 
 #
