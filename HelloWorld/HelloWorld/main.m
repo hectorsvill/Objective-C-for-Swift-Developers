@@ -83,7 +83,7 @@ void learnFormatSpecifiers() {
 }
 
 
-void LearnStrings() {
+void learnStrings() {
 	NSString *str = @"objective-c String";
 	NSLog(@"%@", str);
 	
@@ -125,7 +125,7 @@ void LearnStrings() {
 	}
 }
 
-void LearnMutableString() {
+void learnMutableString() {
 	NSMutableString *mutable = [@"mutable String" mutableCopy];
 	
 	NSMutableString *formatedString = [NSMutableString stringWithFormat:@"%@", @"Object"];
@@ -138,14 +138,21 @@ void LearnMutableString() {
 	NSMutableString *mutateString = [ @"some string" mutableCopy];
 	[mutateString setString:@"one string"];
 	NSLog(@"%@\n", mutateString);
-	
-	
 }
 
 
+void learnNSNumber() {
+	NSNumber *i = [NSNumber numberWithInteger:100];
+	float number = [i floatValue];
+	
+	NSNumber *luckyNumber = @EULERS_NUMBER;
+	NSNumber *blueSky = @NO;
+	NSLog(@"%@\n%@\n", luckyNumber, blueSky);
+}
+
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		LearnMutableString();
+		learnNSNumber();
 	}
 
 	return 0;

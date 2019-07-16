@@ -159,18 +159,16 @@ void learnFormatSpecifiers() {
 
 *Objective-C*
 ```objective-c
-void LearnStrings() {
-	NSString *str = @"objective-c String";
-	NSLog(@"%@", str);
+NSString *str = @"objective-c String";
+NSLog(@"%@", str);
 
-	NSInteger number = 42;
+NSInteger number = 42;
 
-	NSString *output = [NSString stringWithFormat:@"You Pick %ld", (long)number];
-	NSLog(@"%@", output);
+NSString *output = [NSString stringWithFormat:@"You Pick %ld", (long)number];
+NSLog(@"%@", output);
 
-	NSString *output2 = [[NSString alloc] initWithFormat:@"I Picked %ld", (long)number];
-	NSLog(@"%@\n", output2);
-}
+NSString *output2 = [[NSString alloc] initWithFormat:@"I Picked %ld", (long)number];
+NSLog(@"%@\n", output2);
 ```
 
 
@@ -220,10 +218,40 @@ NSMutableString *mutateString = [ @"some string" mutableCopy];
 NSLog(@"%@\n", mutateString);
 
 ```
+#
+### NSNumber
+
+*Objective-C*
+```objective-c
+
+NSNumber *i = [NSNumber numberWithInteger:100];
+float number = [i floatValue];
+
+NSNumber *luckyNumber = @EULERS_NUMBER;
+NSNumber *blueSky = @NO;
+NSLog(@"%@\n%@\n", luckyNumber, blueSky);
+```
 
 #
 ###   
 
+*Objective-C*
+```objective-c
+```
+
+#
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
 *Objective-C*
 ```objective-c
 ```
