@@ -193,12 +193,31 @@ void learnSorting() {
 	}
 	
 }
+void learnFunntionalTechniques() {
+	NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+	
+	// loops through array
+	[colors enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+		NSLog(@"%@", obj);
+	}];
+	
+	// loop through array and find green
+	[colors enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+		if([obj isEqualToString:@"green"]) {
+			NSLog(@"%@", obj);
+			*stop = YES;
+		} else {
+			NSLog(@"%ld", idx);
+		}
+	}];
+}
+
 
 
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		learnSorting();
+		learnFunntionalTechniques();
 	}
 
 	return 0;

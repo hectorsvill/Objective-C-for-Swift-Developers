@@ -287,9 +287,26 @@ for (NSString *s in sorted) {
 }
 ```
 
-#
+# Functional Techniques
 *Objective-C*
 ```objective-c
+
+NSMutableArray *colors = [@[@"red", @"green", @"blue"] mutableCopy];
+
+// loops through array
+[colors enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+NSLog(@"%@", obj);
+}];
+
+// loop through array and find green
+[colors enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+	if([obj isEqualToString:@"green"]) {
+		NSLog(@"%@", obj);
+		*stop = YES;
+	} else {
+		NSLog(@"%ld", idx);
+	}
+}];
 ```
 
 #
