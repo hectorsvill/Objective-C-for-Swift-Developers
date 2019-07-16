@@ -125,12 +125,27 @@ void LearnStrings() {
 	}
 }
 
-
+void LearnMutableString() {
+	NSMutableString *mutable = [@"mutable String" mutableCopy];
+	
+	NSMutableString *formatedString = [NSMutableString stringWithFormat:@"%@", @"Object"];
+	
+	NSLog(@"%@ \n %@ \n", mutable, formatedString);
+	
+	//store up to 4096 chars
+	//NSMutableString  *longString = [NSMutableString stringWithCapacity: 4096];
+	
+	NSMutableString *mutateString = [ @"some string" mutableCopy];
+	[mutateString setString:@"one string"];
+	NSLog(@"%@\n", mutateString);
+	
+	
+}
 
 
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
-		LearnStrings();
+		LearnMutableString();
 	}
 
 	return 0;
