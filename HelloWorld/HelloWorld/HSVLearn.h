@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)learnArrays;
 
+- (void) learnPrimitiveTypes;
+
 - (void)learnMutableArrays;
 
 - (void)learnSorting;

@@ -214,6 +214,22 @@ NSLog(@"%@\n", mutateString);
 
 ```
 #
+### Primitive Types
+### 
+
+*Objective-C*
+```objective-c
+//Raw Numbers
+int i = 0;
+float f = 1.0001;
+char c = 'c';
+char *str = "C String\0";
+
+```
+
+
+
+
 ### NSNumber
 
 *Objective-C*
@@ -323,14 +339,6 @@ for (NSString *key in students) {
 
 ```
 
-#
-### 
-
-*Objective-C*
-```objective-c
-
-
-```
 
 #
 ###   
