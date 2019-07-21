@@ -29,33 +29,33 @@ else
 
 *Swift*
 ```swift
-func learn2SwitchCase() {
-	let n = 42
-	switch n {
-	case 1...19:
-		print("a number between 1...19")
-	case 20...42:
-		let x = 10
-		print("found 42 and x = \(x)")
-	default:
-		print("default")
-	}
+
+let n = 42
+switch n {
+case 1...19:
+	print("a number between 1...19")
+case 20...42:
+	let x = 10
+	print("found 42 and x = \(x)")
+default:
+	print("default")
 }
+
 
 ```
 
 *Objective-C*
 ```objective-c
 
-void learn2SwitchCase() {
-	int n = 42;
-	switch (n) {
-		case 1:
-		{
-			int foo = 1;
-			NSLog(@"found %i", foo);
-			break;
-		}
+
+int n = 42;
+switch (n) {
+	case 1:
+	{
+		int foo = 1;
+		NSLog(@"found %i", foo);
+		break;
+	}
 		case 42:
 			NSLog(@"Found %d \n", n);
 	}
@@ -68,25 +68,25 @@ void learn2SwitchCase() {
 
 *Swift*
 ```swift
-func learnLoops() {
-	let names  = ["str1", "atr2"]
-	for n in names {
-		print(n)
-	}
+
+let names  = ["str1", "atr2"]
+for n in names {
+	print(n)
 }
+
 
 ```
 
 *Objective-C*
 ```objective-c
-void learnLoops() {
-	NSArray *names = @[@"hector", @"Marcela"];
-	for (NSString *name in names)
-		NSLog(@"hello %@\n", name);
 
-	for(int d = 0; d < 10; d++)
-		NSLog(@"%d * %d = %d", d, d, d * d);
-}
+NSArray *names = @[@"hector", @"Marcela"];
+for (NSString *name in names)
+	NSLog(@"hello %@\n", name);
+
+for(int d = 0; d < 10; d++)
+	NSLog(@"%d * %d = %d", d, d, d * d);
+
 ```
 
 
@@ -97,20 +97,19 @@ void learnLoops() {
 *Swift*
 ```swift
 
-func learnNillCoalescing() {
-	let str: String?
-	str = nil
-	print("This string is \(str ?? "an empty string")")
-}
+let str: String?
+str = nil
+print("This string is \(str ?? "an empty string")")
+
 
 ```
 
 *Objective-C*
 ```objective-c
-void learnNillCoalescing() {
-	NSString *str = nil;
-	NSLog(@"is nil %@", str ?: @"is nil");
-}
+
+NSString *str = nil;
+NSLog(@"is nil %@", str ?: @"is nil");
+
 
 ```
 
@@ -119,17 +118,13 @@ void learnNillCoalescing() {
 
 *Objective-C*
 ```objective-c
-
-void learnPointers() {
 //all objective-c objects must be ponters
 //constants
-	NSString * const first = @"Hello";
-	NSLog(@"%p, %@", first, first);
+NSString * const first = @"Hello";
+NSLog(@"%p, %@", first, first);
 
-	NSInteger n = 100;
-	NSLog(@"%ld %@ \n",n, first);
-}
-
+NSInteger n = 100;
+NSLog(@"%ld %@ \n",n, first);
 ```
 
 #
@@ -145,11 +140,11 @@ void learnFormatSpecifiers() {
 // %ld means "long int"
 
 
-	NSLog(@"Euler's number: %0.5f", EULERS_NUMBER);
+NSLog(@"Euler's number: %0.5f", EULERS_NUMBER);
 
-	NSInteger i = 10;
-	NSLog(@"%ld", (long)i);
-}
+NSInteger i = 10;
+NSLog(@"%ld", (long)i);
+
 
 ```
 
@@ -314,8 +309,6 @@ NSLog(@"%@", obj);
 
 *Objective-C*
 ```objective-c
-
-
 
 NSDictionary *students = [NSDictionary dictionaryWithObjectsAndKeys:
 	@"Hector", @"iOS6",
