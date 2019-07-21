@@ -326,15 +326,19 @@ NSLog(@"%@", obj);
 *Objective-C*
 ```objective-c
 
-NSDictionary *students = [NSDictionary dictionaryWithObjectsAndKeys:
-	@"Hector", @"iOS6",
-	@"Pedro", @"iOS100",
-	nil
-];
+NSDictionary *students0 = @{@"Hector" : @"iOS6", 
+								@"Pedro" : @"iOS100"};
 
-for (NSString *key in students) {
-	NSLog(@"key: %@ Value: %@\n", key, students[key]);
-}
+for (NSString *key in students0)
+	NSLog(@"key: %@ Value: %@ \n", key, students0[key]);
+
+NSMutableDictionary *scores = [[NSMutableDictionary alloc] initWithDictionary: @{}];
+
+[scores addEntriesFromDictionary:@{@"Team76434": @"23232"}];
+[scores addEntriesFromDictionary:@{@"Team32134": @"23232"}];
+
+for (NSString *str in scores)
+	[self print_lStr:scores[str]];
 
 
 ```
