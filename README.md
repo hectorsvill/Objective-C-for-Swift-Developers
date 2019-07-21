@@ -309,11 +309,25 @@ NSLog(@"%@", obj);
 }];
 ```
 
-#
+# Dictionaries
 ###   
 
 *Objective-C*
 ```objective-c
+
+
+
+NSDictionary *students = [NSDictionary dictionaryWithObjectsAndKeys:
+	@"Hector", @"iOS6",
+	@"Pedro", @"iOS100",
+	nil
+];
+
+for (NSString *key in students) {
+	NSLog(@"key: %@ Value: %@\n", key, students[key]);
+}
+
+
 ```
 
 #

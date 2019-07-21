@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8AA644822E4342C0039277B /* HSVLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA644722E4342C0039277B /* HSVLearn.m */; };
 		E8ABE4CB22DADF9E008AC64B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE4CA22DADF9E008AC64B /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E8AA644622E4342C0039277B /* HSVLearn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVLearn.h; sourceTree = "<group>"; };
+		E8AA644722E4342C0039277B /* HSVLearn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVLearn.m; sourceTree = "<group>"; };
 		E8ABE4C722DADF9E008AC64B /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8ABE4CA22DADF9E008AC64B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				E8ABE4CA22DADF9E008AC64B /* main.m */,
+				E8AA644622E4342C0039277B /* HSVLearn.h */,
+				E8AA644722E4342C0039277B /* HSVLearn.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 		E8ABE4BF22DADF9E008AC64B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HSV;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Hector Steven";
 				TargetAttributes = {
@@ -118,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AA644822E4342C0039277B /* HSVLearn.m in Sources */,
 				E8ABE4CB22DADF9E008AC64B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
