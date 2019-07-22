@@ -256,8 +256,19 @@
 	[numbers addObject:@200];
 	
 	NSDictionary<NSString *, NSNumber *> *data = @{@"image01": @2032, @"image02": @90232};
+	
 }
 
+- (void)learnNSObject{
+	
+	NSMutableDictionary *dict = [@{@"may":@"5", @"june": @"6"} mutableCopy];
+	
+	if ([dict isKindOfClass:[NSDictionary class]]) {
+		if ([dict respondsToSelector:@selector(removeAllObjects)])
+			[dict performSelector:@selector(removeAllObjects) withObject:nil afterDelay:0.01];
+	}
 
+	
+}
 
 @end

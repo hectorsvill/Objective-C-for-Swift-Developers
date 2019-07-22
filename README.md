@@ -369,7 +369,7 @@ for (NSString *str in colors)
 ```
 ###
 
-# Generics
+# Generics 
 *Objective-C*
 ```objective-c
 NSMutableArray<NSNumber *> *numbers = [NSMutableArray arrayWithCapacity:2];
@@ -379,6 +379,70 @@ NSMutableArray<NSNumber *> *numbers = [NSMutableArray arrayWithCapacity:2];
 
 NSDictionary<NSString *, NSNumber *> *data = @{@"image01": @2032, @"image02": @90232};
 
+```
+
+# NSValue
+###   
+
+*Objective-C*
+```objective-c
+
+// A generic object wrapper that will handle multiple types like CG types
+```
+
+# NSData
+###   
+
+*Objective-C*
+```objective-c
+
+// In Swift its called Data and its identical
+
+```
+
+# NSObject
+###   
+
+*Objective-C*
+```objective-c
+
+// Universal base class, almost all clases inherit from it.
+// Both a class and protocol.
+
+NSMutableDictionary *dict = [@{@"may":@"5", @"june": @"6"} mutableCopy];
+
+if ([dict isKindOfClass:[NSDictionary class]]) {
+	if ([dict respondsToSelector:@selector(removeAllObjects)])
+		[dict performSelector:@selector(removeAllObjects) withObject:nil afterDelay:0.01];
+}
+
+```
+# 
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
 ```
 
 #
