@@ -348,7 +348,7 @@ NSLog(@"%@", obj);
 }];
 ```
 
-# Dictionaries - NSDictionary, NSMutableDictionary
+# Dictionaries
 ###   
 
 *Objective-C*
@@ -369,7 +369,7 @@ for (NSString *str in scores)
 
 
 ```
-# Sets - NSSet, NSMutableSet, NSCountedSet
+# Sets
 ###   
 
 *Objective-C*
