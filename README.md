@@ -1,7 +1,15 @@
 # Objective-C-for-Swift-Developers
 
+## Table of contents
+* [Creating Variable ](#creating-variable  )
+* [Swiftch Case](#swiftch-case)
+* [Loops](#Loops)
+
+
+
+
 #
-###  creating variable  
+##  Creating Variable  
 *Swift*
 ```swift
 let str = "this is swift"
@@ -25,7 +33,7 @@ else
 ```
 
 #
-###  swiftch case
+##  Swiftch Case
 
 *Swift*
 ```swift
@@ -64,7 +72,7 @@ switch (n) {
 ```
 
 #
-###  loops
+##  Loops
 
 *Swift*
 ```swift
