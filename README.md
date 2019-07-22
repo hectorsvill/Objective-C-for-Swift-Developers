@@ -2,8 +2,25 @@
 
 ## Table of contents
 * [Creating Variable ](#creating-variable  )
-* [Swiftch Case](#swiftch-case)
+* [Switch Case](#switch-case)
 * [Loops](#Loops)
+* [Nill Coalescing](#nill-coalescing)
+* [Pointers](#pointers)
+* [Format Specifiers ](#Format-Specifiers)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+* [](#)
+
+
 
 
 
@@ -33,7 +50,7 @@ else
 ```
 
 #
-##  Swiftch Case
+##  Switch Case
 
 *Swift*
 ```swift
@@ -100,7 +117,7 @@ for(int d = 0; d < 10; d++)
 
 
 #
-### nill coalescing
+### Nill Coalescing
 
 *Swift*
 ```swift
