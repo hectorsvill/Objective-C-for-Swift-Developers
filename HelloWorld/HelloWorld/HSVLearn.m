@@ -267,8 +267,34 @@
 		if ([dict respondsToSelector:@selector(removeAllObjects)])
 			[dict performSelector:@selector(removeAllObjects) withObject:nil afterDelay:0.01];
 	}
+}
 
+- (void)learnNSError{
+	NSError *error;
+	NSString *fileString = [NSString stringWithContentsOfFile:@"hello.txt" encoding:nil error:&error];
+	
+	NSLog(@"error: %@", error);
+}
+
+- (void)learnBlocks{
+	void (^print42)(void) = ^ {
+		// void - block returns nothing
+		// (^print42) - set block to a variable called
+		// (void) - takes no parameters
+		
+		[self print_lStr:@"42"];
+	};
+	
+	print42();
+	
+	NSNumber* (^get42)(void) = ^{
+		return @42;
+	};
+	
+	
 	
 }
+
+
 
 @end

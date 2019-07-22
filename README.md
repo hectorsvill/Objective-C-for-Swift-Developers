@@ -417,18 +417,33 @@ if ([dict isKindOfClass:[NSDictionary class]]) {
 }
 
 ```
-# 
+# NSError
 ###   
 
 *Objective-C*
 ```objective-c
+NSError *error;
+NSString *fileString = [NSString stringWithContentsOfFile:@"hello.txt" encoding:nil error:&error];
+
+NSLog(@"error: %@", error);
 ```
 
-#
+# Blocks
 ###   
+
+*Swift*
+```objective-c
+let print42 = {
+	print("42");
+}
+
+```
 
 *Objective-C*
 ```objective-c
+
+
+
 ```
 
 #

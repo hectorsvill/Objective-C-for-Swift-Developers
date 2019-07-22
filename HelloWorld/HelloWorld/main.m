@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
 		
 		HSVLearn *learn = [[HSVLearn alloc] init];
 		
-		[learn learnNSObject];
+		[learn learnBlocks];
 		
 		
 	}

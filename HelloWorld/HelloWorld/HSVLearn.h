@@ -54,6 +54,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)learnNSObject;
 
+- (void)learnNSError;
+
+- (void)learnBlocks;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
