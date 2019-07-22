@@ -470,6 +470,19 @@ let print42 = {
 *Objective-C*
 ```objective-c
 
+void (^print42)(void) = ^ {
+// void - block returns nothing
+// (^print42) - set block to a variable called
+// (void) - takes no parameters
+
+	[self print_lStr:@"42"];
+};
+
+print42();
+
+NSNumber* (^get42)(void) = ^{
+	return @42;
+};
 
 
 ```
