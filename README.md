@@ -320,14 +320,13 @@ NSLog(@"%@", obj);
 }];
 ```
 
-# Dictionaries
+# Dictionaries - NSDictionary, NSMutableDictionary
 ###   
 
 *Objective-C*
 ```objective-c
 
-NSDictionary *students0 = @{@"Hector" : @"iOS6", 
-								@"Pedro" : @"iOS100"};
+NSDictionary *students0 = @{@"Hector" : @"iOS6", @"Pedro" : @"iOS100"};
 
 for (NSString *key in students0)
 	NSLog(@"key: %@ Value: %@ \n", key, students0[key]);
@@ -342,18 +341,44 @@ for (NSString *str in scores)
 
 
 ```
-
-
-#
+# Sets - NSSet, NSMutableSet, NSCountedSet
 ###   
 
 *Objective-C*
 ```objective-c
-```
+NSSet *mySet = [NSSet setWithObjects:@"one", @"two", nil];
+NSSet *yourSet = [NSSet setWithObjects:@"four", @"five", nil];
+NSSet *ourSet = [mySet setByAddingObjectsFromSet:yourSet];
 
-#
+NSMutableSet *mutableSet = [ourSet mutableCopy];
+[mutableSet addObject:@"six"];
+
+for (NSString *n in ourSet)
+	[self print_lStr:n];
+
+[mutableSet removeAllObjects];
+
+// NSCountedSet is automaticly mutable and counts number of times objects appear
+NSCountedSet *colors = [NSCountedSet setWithArray:@[@"red", @"red", @"green", @"blue"]];
+
+[colors addObjectsFromArray:@[@"red", @"blue", @"orange", @"yellow"]];
+
+for (NSString *str in colors)
+	NSLog(@"%@ appeares %lu times", str, (unsigned long)[colors countForObject:str]);
+
+```
+###
+
+# Generics
 *Objective-C*
 ```objective-c
+NSMutableArray<NSNumber *> *numbers = [NSMutableArray arrayWithCapacity:2];
+[numbers addObject:@100];
+//[numbers addObject:@"one"]; // generates warning
+[numbers addObject:@200];
+
+NSDictionary<NSString *, NSNumber *> *data = @{@"image01": @2032, @"image02": @90232};
+
 ```
 
 #
