@@ -44,6 +44,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1243C053244D55990072A4AA /* HSVLearn */ = {
+			isa = PBXGroup;
+			children = (
+				E8AA644622E4342C0039277B /* HSVLearn.h */,
+				E8AA644722E4342C0039277B /* HSVLearn.m */,
+			);
+			name = HSVLearn;
+			sourceTree = "<group>";
+		};
+		1243C054244D5B890072A4AA /* HSVNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				1243C051244D4A220072A4AA /* HSVNetworking.m */,
+				1243C050244D4A220072A4AA /* HSVNetworking.h */,
+			);
+			path = HSVNetworking;
+			sourceTree = "<group>";
+		};
 		E8ABE4BE22DADF9E008AC64B = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				E8ABE4CA22DADF9E008AC64B /* main.m */,
-				E8AA644622E4342C0039277B /* HSVLearn.h */,
-				E8AA644722E4342C0039277B /* HSVLearn.m */,
-				1243C050244D4A220072A4AA /* HSVNetworking.h */,
-				1243C051244D4A220072A4AA /* HSVNetworking.m */,
+				1243C053244D55990072A4AA /* HSVLearn */,
+				1243C054244D5B890072A4AA /* HSVNetworking */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";

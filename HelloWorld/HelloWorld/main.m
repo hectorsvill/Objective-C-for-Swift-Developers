@@ -21,8 +21,11 @@ int main(int argc, const char * argv[]) {
         NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/?limit=964"];
         HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
 
-        [networking fetchWithCount:10];
+        [networking fetchWithCount:10 completion:^(NSData *data) {
+            NSLog(@"data: %@", data);
+        }];
 
+        NSLog(@"url: %@", [networking baseURL]);
 	}
 
 	return 0;

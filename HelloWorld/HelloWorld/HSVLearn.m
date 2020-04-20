@@ -144,10 +144,10 @@
 
 - (void) learnPrimitiveTypes{
 	//Raw Numbers
-	int i = 0;
-	float f = 1.0001;
-	char c = 'c';
-	char *str = "C String\0";
+//	int i = 0;
+//	float f = 1.0001;
+//	char c = 'c';
+//	char *str = "C String\0";
 }
 
 
