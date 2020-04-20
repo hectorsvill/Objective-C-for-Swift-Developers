@@ -19,7 +19,7 @@
 }
 
 
-- (void)fetchWithCount:(int)count completion:(void (^)(NSData *))completion
+- (void)fetchWithCount:(int)count completion:(void (^)(NSDictionary *))completion
 {
     NSString *countString = [NSString stringWithFormat:@"%d", count];
     NSURLComponents *componenets = [NSURLComponents componentsWithURL:_baseURL resolvingAgainstBaseURL:true];
@@ -29,8 +29,8 @@
     NSURL *url = [componenets URL];
     NSURLRequest *request = [NSMutableURLRequest requestWithURL: url];
 
-
-    [[[NSURLSession sharedSession] dataTaskWithURL: _baseURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request
+                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", [error localizedDescription]);
             return;
@@ -41,15 +41,22 @@
             return;
         }
 
-        NSLog(@"data: %@", [data bytes]);
-        [completion data];
+        NSError *jsonError;
+        NSDictionary *pokemonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 
+        if (error) {
+            NSLog(@"error with json: %@:", [error localizedDescription]);
+            return;
+        } else {
+            if (!pokemonDictionary || [pokemonDictionary isKindOfClass:[NSDictionary class]]){
+                completion(pokemonDictionary);
+            }
+            else {
+                NSLog(@"object is not NSDictionary");
+                return;
+            }
+        }
     }] resume];
-
-
-//    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-
-//    } ] resume];
 }
 
 
