@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithBaseURL:(NSURL *)baseURL;
 
-- (void) fetchWithBaseURL:(NSURL*)baseURL;
+- (void)fetchWithCount:(int)count;
 
 @end
 

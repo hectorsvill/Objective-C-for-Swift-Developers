@@ -19,8 +19,34 @@
 }
 
 
-- (void)fetchWithBaseURL:(NSURL *)baseURL
+- (void)fetchWithCount:(int)count
 {
+    NSString *countString = [NSString stringWithFormat:@"%d", count];
+    NSURLComponents *componenets = [NSURLComponents componentsWithURL:_baseURL resolvingAgainstBaseURL:true];
+    NSURLQueryItem *limit = [NSURLQueryItem queryItemWithName:@"limit" value:countString];
+    componenets.queryItems = @[limit];
+
+
+    NSURL *url = [componenets URL];
+    NSURLRequest *request = [NSMutableURLRequest requestWithURL: url];
+
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request
+                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", [error localizedRecoverySuggestion]);
+            return;
+        }
+
+        if (!data) {
+            NSLog(@"data Error: %@", [error localizedRecoverySuggestion]);
+            return;
+        }
+
+        NSLog(@"%@", [data bytes]);
+
+
+    } ] resume];
+
 
 }
 

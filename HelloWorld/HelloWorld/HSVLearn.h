@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define EULERS_NUMBER 2.7182818284590452353602874713527
 
-- (void) print_lStr:(NSString *)str;
+- (void)print_lStr:(NSString *)str;
 
 - (void)learnCreatingVariables;
 
