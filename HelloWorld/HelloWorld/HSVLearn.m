@@ -299,7 +299,7 @@
 
 - (void)lernBasicNetworking
 {
-    NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/?limit=964"];
+    NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/"];
     HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
 
     [networking fetchWithCount:1 completion:^(NSDictionary *myData) {
