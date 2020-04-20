@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1243C052244D4A220072A4AA /* HSVNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1243C051244D4A220072A4AA /* HSVNetworking.m */; };
 		E8AA644822E4342C0039277B /* HSVLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA644722E4342C0039277B /* HSVLearn.m */; };
 		E8ABE4CB22DADF9E008AC64B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE4CA22DADF9E008AC64B /* main.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1243C050244D4A220072A4AA /* HSVNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVNetworking.h; sourceTree = "<group>"; };
+		1243C051244D4A220072A4AA /* HSVNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVNetworking.m; sourceTree = "<group>"; };
 		E8AA644622E4342C0039277B /* HSVLearn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVLearn.h; sourceTree = "<group>"; };
 		E8AA644722E4342C0039277B /* HSVLearn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVLearn.m; sourceTree = "<group>"; };
 		E8ABE4C722DADF9E008AC64B /* HelloWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelloWorld; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +66,8 @@
 				E8ABE4CA22DADF9E008AC64B /* main.m */,
 				E8AA644622E4342C0039277B /* HSVLearn.h */,
 				E8AA644722E4342C0039277B /* HSVLearn.m */,
+				1243C050244D4A220072A4AA /* HSVNetworking.h */,
+				1243C051244D4A220072A4AA /* HSVNetworking.m */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1243C052244D4A220072A4AA /* HSVNetworking.m in Sources */,
 				E8AA644822E4342C0039277B /* HSVLearn.m in Sources */,
 				E8ABE4CB22DADF9E008AC64B /* main.m in Sources */,
 			);

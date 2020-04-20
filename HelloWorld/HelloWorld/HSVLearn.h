@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HSVLearn : NSObject
 
-
-
 #define EULERS_NUMBER 2.7182818284590452353602874713527
 
 - (void) print_lStr:(NSString *)str;
@@ -57,7 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)learnNSError;
 
 - (void)learnBlocks;
-
 
 @end
 

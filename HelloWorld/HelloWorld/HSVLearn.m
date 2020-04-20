@@ -8,6 +8,7 @@
 
 #import "HSVLearn.h"
 
+
 @implementation HSVLearn
 
 - (void) print_lStr:(NSString *)str {
@@ -273,7 +274,7 @@
 	NSError *error;
 	NSString *fileString = [NSString stringWithContentsOfFile:@"hello.txt" encoding:nil error:&error];
 	
-	NSLog(@"error: %@", error);
+	NSLog(@"error: %@", fileString);
 }
 
 - (void)learnBlocks{
@@ -291,7 +292,8 @@
 		return @42;
 	};
 	
-	
+
+    NSLog(@"%@", get42);
 	
 }
 
