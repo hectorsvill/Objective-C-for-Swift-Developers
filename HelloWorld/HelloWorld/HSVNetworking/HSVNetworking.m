@@ -8,6 +8,13 @@
 
 #import "HSVNetworking.h"
 
+//MARK: - Private Properties
+@interface HSVNetworking()
+- (NSURLRequest *)createPokemonListURLRequest;
+@property (nonatomic, copy) NSMutableArray *stringArray;
+@end
+
+//MARK: - @implementation
 @implementation HSVNetworking
 
 - (instancetype)initWithBaseURL:(NSURL *)baseURL
@@ -18,8 +25,7 @@
     return self;
 }
 
-
-- (void)fetch:(void (^)(NSDictionary *))completion
+- (NSURLRequest *)createPokemonListURLRequest
 {
     NSString *countString = [NSString stringWithFormat:@"%d", limit];
     NSURLComponents *componenets = [NSURLComponents componentsWithURL:_baseURL resolvingAgainstBaseURL:true];
@@ -28,6 +34,14 @@
 
     NSURL *url = [componenets URL];
     NSURLRequest *request = [NSMutableURLRequest requestWithURL: url];
+
+    return request;
+}
+
+
+- (void)fetch:(void (^)(NSDictionary *))completion
+{
+    NSURLRequest *request = [self createPokemonListURLRequest];
 
     [[[NSURLSession sharedSession] dataTaskWithRequest:request
                                      completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
@@ -58,6 +72,8 @@
         }
     }] resume];
 }
+
+
 
 
 @end

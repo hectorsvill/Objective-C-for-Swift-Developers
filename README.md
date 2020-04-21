@@ -26,7 +26,7 @@
 * [Blocks](#Blocks)
 * [NSURLSession](#NSURLSession)
 * [Instance Variables](#ivars)
-* [](#)
+* [Private Properties](#Private-Properties)
 
 
 #
@@ -557,14 +557,26 @@ NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/"];
 HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
 networking->limit = 10;
 ```
+# Private-Properties
 
+-  create a class extension
+    -  Create a second `@interface` for the class inside the `@implementation` file.
+    - We move private properties to a class extension.
 
-
-#
-###   
+- NOTE: We can only create class extensions from classes we have source code to. ( canot extend from UIKit classes)
 
 *Objective-C*
 ```objective-c
+//MARK: - Private Properties
+
+@interface HSVNetworking()
+
+- (NSURLRequest *)createPokemonListURLRequest;
+@property (nonatomic, copy) NSMutableArray *stringArray;
+
+@end
+
+@implementation HSVNetworking
 ```
 
 #
