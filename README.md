@@ -540,8 +540,8 @@ NSNumber* (^get42)(void) = ^{
 ## Instance Varaibles
 ###   
     
-- `@public` to provde acces after init
-- ivars ar available `@implementatio`
+- `@public` to provide acces after init
+- ivars ar available `@implementation`
     
 *Objective-C*
 ```objective-c
