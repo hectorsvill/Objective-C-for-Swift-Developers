@@ -601,9 +601,23 @@ networking->limit = 10;
 
 ```
 
-#
+# Property-Attributes
+###   
+- You can choose 1 from each catagory
+        - `atomic`, `nonatomic`
+        - `strong`, `weak`, `copy`, `assign`, `retain`
+        -  `readwrite`, `readonly`
+- `getter=` and `setter=` attributes allow us to change the name of synthesized getter and setter
 
+- default property attributes: `atomic`,  `strong`, `readwrite`
 
+```objective-c
+
+```
+
+*Objective-C*
+```objective-c
+```
 #
 ###   
 

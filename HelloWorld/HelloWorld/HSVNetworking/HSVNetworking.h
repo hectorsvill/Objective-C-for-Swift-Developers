@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
     int limit;
 }
 
-@property NSString *generation;
+@property (strong, atomic, readwrite) NSString *generation;
 
 @property (nonatomic, copy, readonly) NSURL *baseURL;
 
