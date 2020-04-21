@@ -26,8 +26,12 @@
 * [Blocks](#Blocks)
 * [NSURLSession](#NSURLSession)
 * [Instance Variables](#ivars)
+* [Pure Properties](#Pure-Properties)
 * [Private Properties](#Private-Properties)
-
+* [Property Attributes](#Property-Attributes)
+* []()
+* []()
+* []()
 
 #
 ##  Creating Variable  
@@ -536,6 +540,7 @@ NSNumber* (^get42)(void) = ^{
 
 ```
 
+
 # ivars
 ## Instance Varaibles
 ###   
@@ -557,6 +562,23 @@ NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/"];
 HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
 networking->limit = 10;
 ```
+# Pure-Properties
+## `@property`
+- A property is a method that gets and sets the value of an instance varaibale.
+- Creates an ivar called `_baseURL`. (_ + object name)
+- You can create your unique ivar with `@synthesize`.
+
+```objective-c
+//  HSVNetworking.h
+@interface HSVNetworking : NSObject
+
+@property NSURL *baseURL;
+
+@end
+```
+#
+
+
 # Private-Properties
 
 -  create a class extension
@@ -567,7 +589,8 @@ networking->limit = 10;
 
 *Objective-C*
 ```objective-c
-//MARK: - Private Properties
+//  HSVNetworking.m
+//  MARK: - Private Properties
 
 @interface HSVNetworking()
 
@@ -576,7 +599,6 @@ networking->limit = 10;
 
 @end
 
-@implementation HSVNetworking
 ```
 
 #
@@ -594,6 +616,7 @@ networking->limit = 10;
 
 *Objective-C*
 ```objective-c
+@end
 ```
 
 #

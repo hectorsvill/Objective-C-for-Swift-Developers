@@ -17,10 +17,13 @@
 //MARK: - @implementation
 @implementation HSVNetworking
 
+@synthesize generation = gen;
+
 - (instancetype)initWithBaseURL:(NSURL *)baseURL
 {
     if (self = [super init]){
         _baseURL = [baseURL copy];
+        gen = @"1";
     }
     return self;
 }

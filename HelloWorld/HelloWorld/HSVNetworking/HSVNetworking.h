@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
     int limit;
 }
 
+@property NSString *generation;
+
 @property (nonatomic, copy, readonly) NSURL *baseURL;
 
 - (instancetype)initWithBaseURL:(NSURL *)baseURL;
