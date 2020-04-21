@@ -10,13 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HSVNetworking : NSObject
+@interface HSVNetworking : NSObject {
+    @public
+    int limit;
+}
 
 @property (nonatomic, copy, readonly) NSURL *baseURL;
 
 - (instancetype)initWithBaseURL:(NSURL *)baseURL;
-
-- (void)fetchWithCount:(int)count completion:(void (^)(NSDictionary *))completion;
+- (void)fetch:(void (^)(NSDictionary *))completion;
 
 @end
 

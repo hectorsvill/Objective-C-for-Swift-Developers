@@ -19,9 +19,9 @@
 }
 
 
-- (void)fetchWithCount:(int)count completion:(void (^)(NSDictionary *))completion
+- (void)fetch:(void (^)(NSDictionary *))completion
 {
-    NSString *countString = [NSString stringWithFormat:@"%d", count];
+    NSString *countString = [NSString stringWithFormat:@"%d", limit];
     NSURLComponents *componenets = [NSURLComponents componentsWithURL:_baseURL resolvingAgainstBaseURL:true];
     NSURLQueryItem *limit = [NSURLQueryItem queryItemWithName:@"limit" value:countString];
     componenets.queryItems = @[limit];

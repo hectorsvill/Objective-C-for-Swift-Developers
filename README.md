@@ -25,6 +25,7 @@
 * [NSError](#NSError)
 * [Blocks](#Blocks)
 * [NSURLSession](#NSURLSession)
+* [Instance Variables](#ivars)
 * [](#)
 
 
@@ -534,6 +535,43 @@ NSNumber* (^get42)(void) = ^{
 
 
 ```
+
+# ivars
+## Instance Varaibles
+###   
+    
+    - `@public` to provde acces after init
+    - ivars ar available `@implementatio`
+    
+*Objective-C*
+```objective-c
+@interface HSVNetworking : NSObject {
+    @public
+    int limit;
+}
+
+```
+
+```objective-c
+NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/"];
+HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
+networking->limit = 10;
+```
+
+
+
+#
+###   
+
+*Objective-C*
+```objective-c
+NSURL *url = [NSURL URLWithString:@"https://pokeapi.co/api/v2/pokemon/"];
+HSVNetworking *networking  = [[HSVNetworking alloc] initWithBaseURL:url];
+networking->limit = 10;
+```
+
+#
+
 
 #
 ###   

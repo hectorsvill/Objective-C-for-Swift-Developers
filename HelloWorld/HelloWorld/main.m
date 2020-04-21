@@ -12,8 +12,8 @@
 int main(int argc, const char * argv[]) {
 	@autoreleasepool {
 		
-//		HSVLearn *learn = [[HSVLearn alloc] init];
-//		[learn learnBlocks];
+        HSVLearn *learn = [HSVLearn new];
+		[learn lernBasicNetworking];
 	}
 
 	return 0;
