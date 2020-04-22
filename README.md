@@ -29,6 +29,8 @@
 * [Pure Properties](#Pure-Properties)
 * [Private Properties](#Private-Properties)
 * [Property Attributes](#Property-Attributes)
+* [Categories](#Categories)
+* []()
 * []()
 * []()
 * []()
@@ -612,18 +614,42 @@ networking->limit = 10;
 
 - default property attributes: `atomic`,  `strong`, `readwrite`
 
-```objective-c
-
-```
-
-*Objective-C*
-```objective-c
-```
-#
+# Categories
 ###   
+-  A Category is similar to an extension in swift.
+- Naming convention: ClassName+CategoryName
+- Categories can work on any class.
+- To create a category, create a new objective-c file, under file type select category and pick a class.
 
 *Objective-C*
 ```objective-c
+//  NSURLRequest+HSVPokemonList.h
+
+@interface NSURLRequest (HSVPokemonList)
+
++ (NSURLRequest *)HSVPokemonList:(NSURL *)baseURL limit:(int)limit;
+
+@end
+```
+
+```objective-c
+//  NSURLRequest+HSVPokemonList.m
+
+@implementation NSURLRequest (HSVPokemonList)
+
++ (NSURLRequest *)HSVPokemonList:(NSURL *)baseURL limit:(int)limit
+{
+    NSString *countString = [NSString stringWithFormat:@"%d", limit];
+    NSURLComponents *componenets = [NSURLComponents componentsWithURL:baseURL resolvingAgainstBaseURL:true];
+    NSURLQueryItem *limitQuery = [NSURLQueryItem queryItemWithName:@"limit" value:countString];
+    componenets.queryItems = @[limitQuery];
+
+    NSURL *url = [componenets URL];
+    NSURLRequest *request = [[self new] initWithURL:url];
+
+    return request;
+}
+@end
 ```
 
 #
@@ -635,3 +661,42 @@ networking->limit = 10;
 ```
 
 #
+###   
+
+*Objective-C*
+```objective-c
+@end
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+@end
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+@end
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+@end
+```
+
+#
+###   
+
+*Objective-C*
+```objective-c
+@end
+```
+

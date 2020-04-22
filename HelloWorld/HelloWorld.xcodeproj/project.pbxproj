@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		122A4E2B2450116C002E777F /* NSURLRequest+HSVPokemonList.m in Sources */ = {isa = PBXBuildFile; fileRef = 122A4E2A2450116C002E777F /* NSURLRequest+HSVPokemonList.m */; };
 		1243C052244D4A220072A4AA /* HSVNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1243C051244D4A220072A4AA /* HSVNetworking.m */; };
 		E8AA644822E4342C0039277B /* HSVLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA644722E4342C0039277B /* HSVLearn.m */; };
 		E8ABE4CB22DADF9E008AC64B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8ABE4CA22DADF9E008AC64B /* main.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		122A4E292450116C002E777F /* NSURLRequest+HSVPokemonList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+HSVPokemonList.h"; sourceTree = "<group>"; };
+		122A4E2A2450116C002E777F /* NSURLRequest+HSVPokemonList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+HSVPokemonList.m"; sourceTree = "<group>"; };
 		1243C050244D4A220072A4AA /* HSVNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVNetworking.h; sourceTree = "<group>"; };
 		1243C051244D4A220072A4AA /* HSVNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSVNetworking.m; sourceTree = "<group>"; };
 		E8AA644622E4342C0039277B /* HSVLearn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSVLearn.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				E8ABE4CA22DADF9E008AC64B /* main.m */,
+				122A4E292450116C002E777F /* NSURLRequest+HSVPokemonList.h */,
+				122A4E2A2450116C002E777F /* NSURLRequest+HSVPokemonList.m */,
 				1243C053244D55990072A4AA /* HSVLearn */,
 				1243C054244D5B890072A4AA /* HSVNetworking */,
 			);
@@ -147,6 +152,7 @@
 			files = (
 				1243C052244D4A220072A4AA /* HSVNetworking.m in Sources */,
 				E8AA644822E4342C0039277B /* HSVLearn.m in Sources */,
+				122A4E2B2450116C002E777F /* NSURLRequest+HSVPokemonList.m in Sources */,
 				E8ABE4CB22DADF9E008AC64B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

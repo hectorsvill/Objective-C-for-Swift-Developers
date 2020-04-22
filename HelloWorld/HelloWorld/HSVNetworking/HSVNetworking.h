@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 @property (strong, atomic, readwrite) NSString *generation;
-
 @property (nonatomic, copy, readonly) NSURL *baseURL;
 
 - (instancetype)initWithBaseURL:(NSURL *)baseURL;

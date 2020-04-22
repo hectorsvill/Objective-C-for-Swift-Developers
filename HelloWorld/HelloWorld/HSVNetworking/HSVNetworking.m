@@ -7,6 +7,7 @@
 //
 
 #import "HSVNetworking.h"
+#import "NSURLRequest+HSVPokemonList.h"
 
 //MARK: - Private Properties
 @interface HSVNetworking()
@@ -28,23 +29,9 @@
     return self;
 }
 
-- (NSURLRequest *)createPokemonListURLRequest
-{
-    NSString *countString = [NSString stringWithFormat:@"%d", limit];
-    NSURLComponents *componenets = [NSURLComponents componentsWithURL:_baseURL resolvingAgainstBaseURL:true];
-    NSURLQueryItem *limit = [NSURLQueryItem queryItemWithName:@"limit" value:countString];
-    componenets.queryItems = @[limit];
-
-    NSURL *url = [componenets URL];
-    NSURLRequest *request = [NSMutableURLRequest requestWithURL: url];
-
-    return request;
-}
-
-
 - (void)fetch:(void (^)(NSDictionary *))completion
 {
-    NSURLRequest *request = [self createPokemonListURLRequest];
+    NSURLRequest *request = [NSURLRequest HSVPokemonList:_baseURL limit:limit];
 
     [[[NSURLSession sharedSession] dataTaskWithRequest:request
                                      completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
