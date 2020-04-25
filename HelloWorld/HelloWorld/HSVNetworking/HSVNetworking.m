@@ -33,8 +33,7 @@
 {
     NSURLRequest *request = [NSURLRequest HSVPokemonList:_baseURL limit:limit];
 
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request
-                                     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", [error localizedDescription]);
             return;

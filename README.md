@@ -7,17 +7,17 @@
 * [Nill Coalescing](#nill-coalescing)
 * [Pointers](#pointers)
 * [Format Specifiers ](#Format-Specifiers)
-* [Strings](#Strings)
+* [NSStrings](#NSStrings)
 * [Manipulating and evaluating strings](#Manipulatind-and-evaluating-strings)
-* [Mutable String](#Mutable-String)
+* [NSMutableString](#NSMutableString)
 * [Primitive Types](#Primitive-Types)
 * [NSNumber](#NSNumber)
-* [Arrays](#Arrays)
-* [Mutable Arrays](#Mutable-Arrays)
+* [NSArrays](#NSArrays)
+* [NSMutableArray](#NSMutableArray)
 * [Sorting](#Sorting)
 * [Functional Techniques](#Functional-Techniques)
-* [Dictionaries](#Dictionaries)
-* [Sets](#Sets)
+* [NSDictionary](#NSDictionary)
+* [NSSets](#NSSets)
 * [Generics](#Generics)
 * [NSValue](#NSValue)
 * [NSData](#NSData)
@@ -185,7 +185,7 @@ NSLog(@"%ld", (long)i);
 
 #
 
-###   Strings
+###   NSStrings
 
 *Objective-C*
 ```objective-c
@@ -230,7 +230,7 @@ if ([output containsString: @"42"]) {
 ```
 
 #
-###   Mutable String 
+###   NSMutableString 
 
 *Objective-C*
 ```objective-c
@@ -279,7 +279,7 @@ NSLog(@"%@\n%@\n", luckyNumber, blueSky);
 ```
 
 #
-###   Arrays
+###   NSArrays
 
 *Objective-C*
 ```objective-c
@@ -301,7 +301,7 @@ NSLog(@"char at index 0: %@", [colors objectAtIndex:0]);
 ```
 
 #
-### Mutable Arrays
+### NSMutableArray
 
 *Objective-C*
 ```objective-c
@@ -320,6 +320,8 @@ for (NSString *color in [colors reverseObjectEnumerator]) {
 
 # Sorting
 ###   
+
+- sortedArrayUsingSelector
 
 *Objective-C*
 ```objective-c
@@ -355,7 +357,7 @@ NSLog(@"%@", obj);
 }];
 ```
 
-# Dictionaries
+# NSDictionary
 ###   
 
 *Objective-C*
@@ -376,7 +378,7 @@ for (NSString *str in scores)
 
 
 ```
-# Sets
+# NSSets
 ###   
 
 *Objective-C*
@@ -602,7 +604,7 @@ networking->limit = 10;
 @end
 
 ```
-
+#
 # Property-Attributes
 ###   
 - You can choose 1 from each catagory
@@ -614,6 +616,7 @@ networking->limit = 10;
 
 - default property attributes: `atomic`,  `strong`, `readwrite`
 
+#
 # Categories
 ###   
 -  A Category is similar to an extension in swift.
@@ -651,7 +654,7 @@ networking->limit = 10;
 }
 @end
 ```
-
+#
 #
 ###   
 

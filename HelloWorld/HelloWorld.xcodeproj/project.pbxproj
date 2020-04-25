@@ -47,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122A4E2C24501432002E777F /* NSURLRequest+HSVPokemonList */ = {
+			isa = PBXGroup;
+			children = (
+				122A4E292450116C002E777F /* NSURLRequest+HSVPokemonList.h */,
+				122A4E2A2450116C002E777F /* NSURLRequest+HSVPokemonList.m */,
+			);
+			name = "NSURLRequest+HSVPokemonList";
+			sourceTree = "<group>";
+		};
 		1243C053244D55990072A4AA /* HSVLearn */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E8ABE4CA22DADF9E008AC64B /* main.m */,
-				122A4E292450116C002E777F /* NSURLRequest+HSVPokemonList.h */,
-				122A4E2A2450116C002E777F /* NSURLRequest+HSVPokemonList.m */,
+				122A4E2C24501432002E777F /* NSURLRequest+HSVPokemonList */,
 				1243C053244D55990072A4AA /* HSVLearn */,
 				1243C054244D5B890072A4AA /* HSVNetworking */,
 			);
